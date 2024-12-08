@@ -1,10 +1,10 @@
 echo "Enter Number : "
 read n
 
-if [ $n -ge 18 ]
+if [ $((n % 7)) -eq 0 ]
 then
-    echo "You are allowed for Driving."
+    echo "Divisible."
 
 else
-    echo "You are not allowed for Driving."
+    echo "Not Divisible."
 fi 
