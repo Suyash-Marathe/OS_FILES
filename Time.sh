@@ -1,13 +1,16 @@
-echo "Current time=$(date +"%T")"
-current_hour=$(date +"%H")
+echo "Time = $(date +"%T")"
 
-if [ $current_hour -le 12 ]
-then
-    echo "Good Moring"
-elif [ $current_hour -le 18 ]; then
-    echo "Good Afternoon"
-elif [ $current_hour -le 20 ]; then
-    echo "Good Evening"
-else 
-    echo "Good Night"
+c_d=$(date +"%H")
+echo $c_d
+
+if [ $c_d -le 12 ]; then 
+	echo "Good Moring"
+elif [ $c_d -le 16 ]; then
+	echo "Good Afternoon"
+
+elif [ $c_d -le 20 ]; then
+	echo "Good Evening"
+else
+	echo "Good Night"
 fi
+
